@@ -36,7 +36,7 @@ const SignUpCard = (props) => {
             </div>
             <div className='mt-2'>
                 <input className=' hover:border-orange-500 focus:outline-none focus:border-orange-400  border-2 border-gray-300 rounded w-full' type="text" />
-            </div>
+            </div>  
         </div>
         
         <div className=' mt-6'>

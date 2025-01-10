@@ -12,6 +12,12 @@ const LoginCard = (props) => {
         props.setShowSignup(true)
       }
     
+      const toggleUser=()=>{
+        console.log("user");
+        
+        props.setShowUser(true);
+        props.setShowWelcome(false);
+      }
 
   return (
     <div className='border  shadow-lg w-[380px] h-[450px] p-4 rounded '>
@@ -38,9 +44,9 @@ const LoginCard = (props) => {
             </div>
         </div>
         <div>
-            <input className=' hover:cursor-pointer hover:bg-white hover:text-orange-400 hover:border-orange-400 hover:border-2 font-Aldrich border bg-orange-400 rounded w-full mt-8 text-white' type="submit" value="submit" />
+            <input onClick={toggleUser} className=' hover:cursor-pointer hover:bg-white hover:text-orange-400 hover:border-orange-400 hover:border-2 font-Aldrich border bg-orange-400 rounded w-full mt-8 text-white' type="submit" value="submit" />
         </div>
-        <div className='font-DMSerifText flex mt-4'>Don't have an account yet? <div onClick={toggleSignup} className=' hover:cursor-pointer font-Aldrich ml-2 text-orange-400'>Sign Up</div> </div>
+        <div className='font-DMSerifText flex mt-4'>Don't have an account yet? <div onClick={toggleSignup}  className=' hover:cursor-pointer font-Aldrich ml-2 text-orange-400'>Sign Up</div> </div>
 
     </div>
   )

@@ -1,14 +1,19 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './pages/Home'
+
 import Welcome from './pages/Welcome'
+import User from './pages/User'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [showUser,setShowUser]=useState(false);
+
+  const [showWelcome,setShowWelcome]=useState(true);
   return (
     <>
-      <Welcome/>
+      {showWelcome&&(<Welcome setShowUser={setShowUser} setShowWelcome={setShowWelcome}/>)}
+      {showUser&&(<User/>)}
       
     </>
   )
